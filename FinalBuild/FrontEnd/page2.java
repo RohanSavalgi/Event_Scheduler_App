@@ -12,7 +12,6 @@ public class page2 extends JPanel implements ActionListener
     static JPanel topBar = new JPanel();
     static JPanel sideBar = new JPanel();
     static private JLabel jcomp1;
-    //private JLabel jcomp2;
     private JLabel jcomp3;
     private JTextField jcomp4;
     private JLabel jcomp5;
@@ -27,8 +26,6 @@ public class page2 extends JPanel implements ActionListener
 
     public page2() 
     {
-        
-        //setBackground(new Color(51, 71, 86));
         setBackground(new Color(255, 160, 160));
         //construct preComponents
         String[] jcomp8Items = {"MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"};
@@ -98,7 +95,6 @@ public class page2 extends JPanel implements ActionListener
         setLayout (null);
 
         //add components
-        //add (jcomp1);
         add (jcomp3);
         add (jcomp4);
         add (jcomp12);
@@ -148,20 +144,12 @@ public class page2 extends JPanel implements ActionListener
             compile.day = jcomp8.getSelectedItem().toString();
             
 
-            //FinalBuild.BackEnd.event.getStartingTime();
             FinalBuild.BackEnd.event.getStartingTime();
 
             jcomp4.setText("00");
             jcomp12.setText("00");
             jcomp6.setText("00");
             jcomp13.setText("00");
-
-            // System.out.println(compile.startingHour);
-            // System.out.println(compile.startingMin);
-            // System.out.println(compile.dHour);
-            // System.out.println(compile.dMin);
-            // System.out.println(compile.day);
-
             if(counter == 0)
             {
                 page3.create();
@@ -183,7 +171,6 @@ public class page2 extends JPanel implements ActionListener
     }
     static void page2create()
     {
-        //Icon closeIcon = new ImageIcon("Pictures\\close.png");
         topBar.setPreferredSize (new Dimension (900,50));
         topBar.setBackground(new Color(10, 25, 49));
         jcomp1 = new JLabel ("Calendar");
@@ -195,7 +182,6 @@ public class page2 extends JPanel implements ActionListener
 
         sideBar.setPreferredSize (new Dimension (200, 636));
         sideBar.setBackground(new Color(196, 182, 182));
-        //44, 57, 75
         sideBar.setBounds(0,0,200, 636);
         sideBar.setLayout(new BorderLayout());
         JLabel icon = new JLabel(new ImageIcon("Pictures\\icon.png"));

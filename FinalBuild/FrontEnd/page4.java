@@ -29,7 +29,6 @@ public class page4 extends JPanel implements ActionListener
     {
     	
     	setBackground(new Color(255, 160, 160));
-        //setBackground(new Color(51, 71, 86));
         //construct preComponents
         String[] jcomp6Items = {"Most Important", "Intermediate", "Least Impotant"};
         //construct components
@@ -130,11 +129,6 @@ public class page4 extends JPanel implements ActionListener
             compile.dmEvent = Integer.parseInt(jcomp10.getText());
             compile.bucket = jcomp6.getSelectedItem().toString();
 
-            // System.out.println(compile.nameOfEvent);
-            // System.out.println(compile.dhEvent);
-            // System.out.println(compile.dmEvent);
-            // System.out.println(compile.bucket);
-
             for(FinalBuild.BackEnd.event i : FinalBuild.BackEnd.mainprocess.singleDay)
             {
                 i.day = FinalBuild.FrontEnd.compile.day;
@@ -203,7 +197,6 @@ public class page4 extends JPanel implements ActionListener
         fourframe.add(sideBar,BorderLayout.WEST);
         fourframe.setSize(900,636);
         fourframe.getContentPane().add (new page4());
-        //frame.pack();
         fourframe.setLocationRelativeTo(null);
         fourframe.setVisible (true);
     } 

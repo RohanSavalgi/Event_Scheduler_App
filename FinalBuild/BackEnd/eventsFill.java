@@ -19,8 +19,6 @@ public class eventsFill
                 break;
             }
             setTimings(currentEvent);
-            //currentEvent.displayData();
- 
             if(currentDuration + currentEvent.duration <= event.mainDuration)
             {
                 currentDuration += currentEvent.duration;

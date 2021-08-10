@@ -18,7 +18,6 @@ public class page3 extends JPanel implements ActionListener
     
     public page3() 
     {
-        //setBackground(new Color(51, 71, 86));
     	setBackground(new Color(255, 160, 160));
         //construct components
         jcomp1 = new JLabel ("Day");

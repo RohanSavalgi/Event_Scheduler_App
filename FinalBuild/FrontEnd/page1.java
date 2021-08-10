@@ -20,11 +20,6 @@ class page1 extends JPanel implements ActionListener
 		b1.setFont(new Font("Rockwell", Font.ITALIC,40));
         b1.setBackground((new Color(10,25,51,255)));
         b1.setForeground(new Color(246,153,152,255));
-		// rgba(10,25,51,255)
-		//rgba(246,153,152,255)
-
-
-
 		add(b1);
 
 		b1.setBounds(500 , 450, 50, 50);

@@ -15,9 +15,6 @@ public class priorityBucket
     static int mainPriority = 1;
     static public void priorityBucketSelector(event thisParameter)
     {
-        //input
-        //Scanner keyInput = new Scanner(System.in);
-        //System.out.println("Enter which bucket u wanna put the event into : ");
         int bucketNumber;
         switch(FinalBuild.FrontEnd.compile.bucket)
         {
@@ -78,5 +75,4 @@ public class priorityBucket
             }
         }
     }
-
 }

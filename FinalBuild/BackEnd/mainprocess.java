@@ -13,10 +13,6 @@ public class mainprocess
             if(mainprocess.singleDay.size() != 0)
             {
                 System.out.println("The remaining events which are not included are : ");
-                // for(event i : singleDay)
-                // {
-                //     i.displayData();
-                // }
             }
         }
         while (yesNoChoice == 'Y')
@@ -30,7 +26,6 @@ public class mainprocess
     {
         event temp = new event();
         int minIndex = -1;
-        //sorting
         for(int i = 0; i < singleDay.size() - 1;i++)
         {
             minIndex =i;
@@ -47,16 +42,11 @@ public class mainprocess
             }
         }
         System.out.println("\n\nSorted is : ");
-        // for(event i : singleDay)
-        // {
-        //     i.displayData();
-        // }
     }
     public static void sortTheSingleVector(Vector<event> thisVector)
     {
         event temp = new event();
         int minIndex = -1;
-        //sorting
         for(int i = 0; i < thisVector.size() - 1;i++)
         {
             minIndex = i;
@@ -78,10 +68,6 @@ public class mainprocess
         priorityBucket.pushingToMainBuckets();
         priorityBucket.bucketProcessing();
         priorityBucket.ratioCalculator(priorityBucket.mainBuckets);
-        // for(event  i : singleDay)
-        // {
-        //     i.displayData();
-        // }
         System.out.println("Number of events : " + event.eventsCounter);
         
         sortTheSingleVector(priorityBucket.bucket1);
@@ -146,11 +132,6 @@ public class mainprocess
             i.proirity = 0;
             priorityBucket.bucket2.addElement(i);
         }  
-        // System.out.println("B1 elements are : ");
-        // for(event i : priorityBucket.bucket1)
-        // {
-        //     i.displayData();
-        // }
         System.out.println("The remaining events are : ");
         for(event i : remainingEvents)
         {

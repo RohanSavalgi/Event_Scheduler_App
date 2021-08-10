@@ -49,9 +49,7 @@ public class page5 extends JPanel implements ActionListener
     public page5() 
     {
     	setBackground(new Color(255, 160, 160));
-        //setBackground(new Color(51, 71, 86));
         //construct preComponents
-        //String[] jcomp6Items = {"Most Important", "Intermediate", "Least Impotant"};
         //construct components
         jcomp8 = new JButton ("Exit");
         jcomp8.setFont(new Font("Cambria", Font.PLAIN,23));
@@ -155,8 +153,6 @@ public class page5 extends JPanel implements ActionListener
         jcomp0.setBounds (450, 10, 115, 65); 
         page5.topBar.add(jcomp0,BorderLayout.CENTER);
 
-        //page5.timeTable.setBackground(new Color(0,0,0));
-        //page5.timeTable.setBounds(50,100,800,436);
         page5.timeTable.setLayout(null);
         page5.timeTable.setBounds(25,75,850,486);
 
