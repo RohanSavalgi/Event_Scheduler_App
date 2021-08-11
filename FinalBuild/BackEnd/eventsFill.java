@@ -3,6 +3,8 @@ import java.util.*;
 public class eventsFill
 {
     static Vector<event> doneEvent = new Vector<event>();
+    public static double remainingTime;
+    public static int breakingeve = 0;
     static void eventAllocator()
     {
         double currentPriority = 0;
@@ -26,9 +28,11 @@ public class eventsFill
             }
             else
             {
+                breakingeve = 1;
                 currentPriority += ((currentEvent.ratio) * (event.mainDuration - currentDuration));
                 System.out.println("The last event is performed for " + (event.mainDuration - currentDuration) + " minutes"); 
                 currentDuration += (event.mainDuration - currentDuration);
+                remainingTime = (event.mainDuration - currentDuration);    
             }
             doneEvent.add(currentEvent);
         }

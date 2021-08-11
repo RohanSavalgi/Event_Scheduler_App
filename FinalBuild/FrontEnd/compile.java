@@ -16,6 +16,6 @@ public class compile
     static public String bucket;
     public static void main(String[] args) 
     {
-        page1.create();;
+        page1.create();
     }
 }

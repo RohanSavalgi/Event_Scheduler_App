@@ -142,7 +142,6 @@ public class page2 extends JPanel implements ActionListener
             compile.dHour = Integer.parseInt(jcomp6.getText());
             compile.dMin = Integer.parseInt(jcomp13.getText());
             compile.day = jcomp8.getSelectedItem().toString();
-            
 
             FinalBuild.BackEnd.event.getStartingTime();
 
@@ -159,6 +158,7 @@ public class page2 extends JPanel implements ActionListener
             else
             {
                 page3.thirdframe.setVisible(true);
+                FinalBuild.FrontEnd.page3.jcomp1.setText(FinalBuild.FrontEnd.compile.day);
             }
             
         }

@@ -1,5 +1,6 @@
 package FinalBuild.FrontEnd;
 import java.awt.*;
+import java.text.SimpleDateFormat;
 import java.awt.event.*;
 import javax.swing.*;
 import java.text.SimpleDateFormat;
@@ -9,6 +10,7 @@ import java.awt.geom.RoundRectangle2D;
 
 public class page5 extends JPanel implements ActionListener
 {
+
     static int counter = 0; 
     static SimpleDateFormat commonDateFormat = new SimpleDateFormat("hh:mm a");
     static public JLabel jcomp0 = new JLabel ("Calendar");
@@ -109,6 +111,7 @@ public class page5 extends JPanel implements ActionListener
     {
         JPanel event = new JPanel();
         event.setBackground(new Color(162, 219, 250)); 
+        event.setLayout(new BorderLayout());
         page5.timeTable.add(event);
         switch(eve.day)
         {
@@ -135,12 +138,32 @@ public class page5 extends JPanel implements ActionListener
             break;
         }
         JLabel nameOfEvent = new JLabel(eve.name);
-        event.add(nameOfEvent);
+        event.add(nameOfEvent,BorderLayout.PAGE_START);
         String startingTime = String.valueOf(commonDateFormat.format(eve.eventStartTime.getTime()));
         JLabel startingTimeLabel = new JLabel(startingTime);
-        startingTimeLabel.setFont(new Font("Cambria", Font.BOLD,15));
-        nameOfEvent.setFont(new Font("Cambria", Font.BOLD,18));
-        event.add(startingTimeLabel);
+        startingTimeLabel.setFont(new Font("Cambria", Font.PLAIN,13));
+        nameOfEvent.setFont(new Font("Cambria", Font.BOLD,16));
+        event.add(startingTimeLabel,BorderLayout.CENTER);
+        JLabel eventDuration = new JLabel("00");
+        
+        eventDuration.setFont(new Font("Cambria", Font.PLAIN,13));
+
+        String lhour = Integer.toString(eve.dhh);
+        String lmin = Integer.toString(eve.dmm);
+        String fullDuration;
+        if(FinalBuild.BackEnd.eventsFill.breakingeve == 0)
+        {
+            fullDuration = lhour + " hour " + FinalBuild.BackEnd.eventsFill.remainingTime;
+        }
+        else
+        {
+            fullDuration = lhour + "hour " + lmin + " min";
+        }
+
+        eventDuration.setText(fullDuration);
+        //eventDuration.setText(commonDateFormat.format(FinalBuild.BackEnd.event.startTime.getTime()));
+        
+        //event.add(eventDuration,BorderLayout.PAGE_END);
     }
 
     static public void create()
@@ -151,7 +174,7 @@ public class page5 extends JPanel implements ActionListener
 		jcomp0.setFont(jcomp0.getFont().deriveFont(25.0f));
         jcomp0.setForeground(new Color(62, 219, 250));
         jcomp0.setBounds (450, 10, 115, 65); 
-        page5.topBar.add(jcomp0,BorderLayout.CENTER);
+        page5.topBar.add(jcomp0);
 
         page5.timeTable.setLayout(null);
         page5.timeTable.setBounds(25,75,850,486);

@@ -10,11 +10,11 @@ public class event
     public int duration;//
     static int mhh,mmm; 
     static int mainDuration;
-    int dhh,dmm;
+    public int dhh,dmm;
     int proirity;
     public static int eventsCounter = 0;
     double ratio;
-    static Calendar startTime = Calendar.getInstance();
+    public static Calendar startTime = Calendar.getInstance();
     public Calendar eventStartTime = Calendar.getInstance();
     SimpleDateFormat commonDateFormat = new SimpleDateFormat("hh:mm a");
 
