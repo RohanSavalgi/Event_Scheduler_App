@@ -3,7 +3,7 @@ import java.awt.*;
 import java.text.SimpleDateFormat;
 import java.awt.event.*;
 import javax.swing.*;
-import java.text.SimpleDateFormat;
+//import java.text.SimpleDateFormat;
 
 import FinalBuild.BackEnd.event;
 import java.awt.geom.RoundRectangle2D;
@@ -148,19 +148,20 @@ public class page5 extends JPanel implements ActionListener
         
         eventDuration.setFont(new Font("Cambria", Font.PLAIN,13));
 
-        String lhour = Integer.toString(eve.dhh);
-        String lmin = Integer.toString(eve.dmm);
-        String fullDuration;
-        if(FinalBuild.BackEnd.eventsFill.breakingeve == 0)
-        {
-            fullDuration = lhour + " hour " + FinalBuild.BackEnd.eventsFill.remainingTime;
-        }
-        else
-        {
-            fullDuration = lhour + "hour " + lmin + " min";
-        }
+        // String lhour = Integer.toString(eve.dhh);
+        // String lmin = Integer.toString(eve.dmm);
+        //String fullDuration;
+        // if(FinalBuild.BackEnd.eventsFill.breakingeve == 0)
+        // {
+        //     fullDuration = lhour + " hour " + FinalBuild.BackEnd.eventsFill.remainingTime;
+        // }
+        // else
+        // {
+        //     fullDuration = lhour + "hour " + lmin + " min";
+        // }
 
-        eventDuration.setText(fullDuration);
+        //eventDuration.setText(fullDuration);
+        
         //eventDuration.setText(commonDateFormat.format(FinalBuild.BackEnd.event.startTime.getTime()));
         
         //event.add(eventDuration,BorderLayout.PAGE_END);

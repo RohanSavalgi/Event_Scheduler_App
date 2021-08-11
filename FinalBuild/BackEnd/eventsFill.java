@@ -32,7 +32,8 @@ public class eventsFill
                 currentPriority += ((currentEvent.ratio) * (event.mainDuration - currentDuration));
                 System.out.println("The last event is performed for " + (event.mainDuration - currentDuration) + " minutes"); 
                 currentDuration += (event.mainDuration - currentDuration);
-                remainingTime = (event.mainDuration - currentDuration);    
+                remainingTime = (event.mainDuration - currentDuration);
+                //remainingTime      
             }
             doneEvent.add(currentEvent);
         }
