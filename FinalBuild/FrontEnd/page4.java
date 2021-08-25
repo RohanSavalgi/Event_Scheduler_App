@@ -184,7 +184,6 @@ public class page4 extends JPanel implements ActionListener
         sideBar.setLayout(new BorderLayout());
         JLabel icon = new JLabel(new ImageIcon("Pictures\\icon.png"));
         sideBar.add(icon,BorderLayout.NORTH);
-        
 
         fourframe.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
         fourframe.setContentPane(new JLabel(new ImageIcon("Pictures\\Logo-05.png")));
